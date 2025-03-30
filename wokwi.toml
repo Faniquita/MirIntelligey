@@ -1,0 +1,19 @@
+[wokwi]
+version = 1
+firmware = 'path-to-your-firmware.hex'
+elf = 'path-to-your-firmware.elf'
+
+rfc2217ServerPort = 4000
+
+import serial
+ser = serial.serial_for_url('rfc2217://localhost:4000', baudrate=115200)
+ser.write(b'hello')
+
+# Encaminhe http://localhost:8180 para a porta 80 no ESP32 simulado:
+[[net.forward]]
+from = "localhost:8180"
+to = "device:80"
+
+[[chip]]
+name = 'inverter'  # Para usar o chip no diagram.json, adicione uma peça do tipo "chip-inverter".
+binary = 'chips/inverter.chip.wasm'
