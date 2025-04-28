@@ -6,3 +6,4 @@ Adafruit GFX Library
 
 ArduinoJson
 Adafruit ILI9341
+Adafruit NeoPixel
