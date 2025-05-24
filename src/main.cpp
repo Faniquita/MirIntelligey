@@ -5,15 +5,21 @@
 #include <Adafruit_ILI9341.h>
 #include <Adafruit_NeoPixel.h>
 
-#include "SPI.h"
-// #include "SquareLine/ui.h"
+// Bibliotecas Gráfica
+#include "MiniGrafx.h"
+#include "ILI9341_SPI.h"
+
+#include <SPI.h>
 
 
 // Definição dos pinos do display
 #define TFT_CS    5
 #define TFT_DC    4
 #define TFT_RST   15
+//D8 controla a luz de fundo da tela
+#define TFT_LED 25
 Adafruit_ILI9341 display = Adafruit_ILI9341(TFT_CS, TFT_DC, TFT_RST);
+
 
 const int pinOn = 14;
 const int neoPixel = 2;
@@ -25,45 +31,76 @@ int rgbGreen = 0;
 int rgbBlue = 0;
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(ledsNeopixelCount, neoPixel, NEO_GRB + NEO_KHZ800);
 
+/*
+  1 bit: 2 cores (2^1 = 2)
+  2 bits: 4 cores (2^2 = 4)
+  4 bits: 16 cores (2^4 = 16)
+  8 bits, 256 cores (2^8 = 256)
+*/
+int BITS_PER_PIXEL = 4 ; // 2^4 = 16 colors
+int SCREEN_WIDTH = 240;
+int SCREEN_HEIGHT = 320;
+uint16_t palette[] = {ILI9341_BLACK,     //  0
+                      ILI9341_WHITE,     //  1
+                      ILI9341_NAVY,      //  2
+                      ILI9341_DARKCYAN,  //  3
+                      ILI9341_DARKGREEN, //  4
+                      ILI9341_MAROON,    //  5
+                      ILI9341_PURPLE,    //  6
+                      ILI9341_OLIVE,     //  7
+                      ILI9341_LIGHTGREY, //  8
+                      ILI9341_DARKGREY,  //  9
+                      ILI9341_BLUE,      // 10
+                      ILI9341_GREEN,     // 11
+                      ILI9341_CYAN,      // 12
+                      ILI9341_RED,       // 13
+                      ILI9341_MAGENTA,   // 14
+                      0xFD80};           // 15
+
+
+// Inicializando o pacote gráfico de drivers da biblioteca
+ILI9341_SPI tft = ILI9341_SPI(TFT_CS, TFT_DC);
+MiniGrafx gfx = MiniGrafx(&tft, BITS_PER_PIXEL, palette);
+
 
 // Dados de rede Wi-Fi
 const char* ssid = "Wokwi-GUEST";
 const char* password = "";
 
 
+/**************************************************************************************/
+/********************************* INICIANDO O SETUP  *********************************/
+/**************************************************************************************/
 void setup() {
   // Inicializa o serial
   Serial.begin(115200);
 
-  // // Inicializando leds
+  // Inicializando leds
   pinMode(pinOn, OUTPUT);
   digitalWrite(pinOn, 1);
 
+  // Inicilizando Pins para luz de fundo da tela
+  pinMode(TFT_LED, OUTPUT);
+  digitalWrite(TFT_LED, HIGH);
 
-  // Inicializa o display
+  // Inicializando biblioteca gráfica
+  gfx.init();
+  gfx.fillBuffer(0);
+  gfx.commit();
+
+  // Inicializa o display  
   display.begin();
-  display.fillScreen(ILI9341_BLACK);
-  display.setTextColor(ILI9341_RED);
-  display.setTextSize(3);
-  display.setRotation(1);
-  display.setCursor(20, 160);
-  display.println("Hello world!");
-  display.setTextColor(ILI9341_GREEN);
-  display.setTextSize(2);
-  display.println("Boom 0w0");
+  //display.fillScreen(ILI9341_BLACK);
+  //display.setTextColor(ILI9341_RED);
+  //display.setTextSize(3);
+  //display.setRotation(1);
+  //display.setCursor(20, 160);
+  //display.println("Hello world!");
+  //display.setTextColor(ILI9341_GREEN);
+  //display.setTextSize(2);
+  //display.println("Boom 0w0");
 
-  // Inicializando grafico do display e seus drivers
-  // lv_init();
-  // your_display_driver_init();
-  // your_input_driver_init();  
-  // ui_init(); 
-
-  // while(1) {
-  //   lv_timer_handler();             
-  //   delay_ms(5);               
-  // }
-
-  
+ 
   // Conecta à rede Wi-Fi
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
@@ -103,5 +140,10 @@ void setup() {
 }
 
 void loop() {
-  // Nenhuma ação no loop
+  gfx.fillBuffer(0);
+  gfx.setColor(1);
+  gfx.drawLine(0, 0, 50, 50);
+  gfx.setColor(13);
+  gfx.fillCircle(100, 100, 10);
+  gfx.commit();
 }

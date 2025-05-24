@@ -248,4 +248,12 @@
  C:/Users/trice/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal-spi.h \
  .pio/libdeps/esp32dev/Adafruit\ ILI9341/Adafruit_ILI9341.h \
  .pio/libdeps/esp32dev/Adafruit\ GFX\ Library/Adafruit_SPITFT.h \
- .pio/libdeps/esp32dev/Adafruit\ GFX\ Library/Adafruit_GFX.h
+ .pio/libdeps/esp32dev/Adafruit\ GFX\ Library/Adafruit_GFX.h \
+ .pio/libdeps/esp32dev/Adafruit\ NeoPixel/Adafruit_NeoPixel.h \
+ .pio/libdeps/esp32dev/Mini\ Grafx/src/MiniGrafx.h \
+ C:/Users/trice/.platformio/packages/framework-arduinoespressif32/libraries/FS/src/FS.h \
+ C:/Users/trice/.platformio/packages/framework-arduinoespressif32/libraries/SPIFFS/src/SPIFFS.h \
+ .pio/libdeps/esp32dev/Mini\ Grafx/src/ILI9341_SPI.h \
+ .pio/libdeps/esp32dev/Mini\ Grafx/src/DisplayDriver.h \
+ .pio/libdeps/esp32dev/Mini\ Grafx/src/MiniGrafxFonts.h \
+ .pio/libdeps/esp32dev/Mini\ Grafx/src/ILI9341_SPI.h

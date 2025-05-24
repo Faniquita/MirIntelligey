@@ -259,7 +259,8 @@
     [ "rgb13:DOUT", "rgb12:DIN", "purple", [ "h0" ] ],
     [ "rgb12:DOUT", "rgb11:DIN", "purple", [ "h0" ] ],
     [ "rgb11:DOUT", "rgb10:DIN", "purple", [ "h0" ] ],
-    [ "rgb10:DOUT", "rgb9:DIN", "purple", [ "h0" ] ]
+    [ "rgb10:DOUT", "rgb9:DIN", "purple", [ "h0" ] ],
+    [ "lcd1:LED", "esp:25", "yellow", [ "h-134.4", "v134.4", "h-163.2", "v-124.8" ] ]
   ],
   "dependencies": {}
 }
