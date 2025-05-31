@@ -302,12 +302,11 @@ void update_Data() {
 void update_wheater_Data(){
   // Imagens Fixas
   lv_img_set_src(objects.image_icon_city, &img_icon_location_11p);
-
-  // lv_img_set_src(objects.image_icon_temp, &img_icon_temp_22p);
-  // lv_img_set_src(objects.image_icon_temp_max, &img_icon_max_11p);
-  // lv_img_set_src(objects.image_icon_temp_min, &img_icon_min_11p);
-  // lv_img_set_src(objects.image_icon_humidity, &img_icon_humd_22p);
-  // lv_img_set_src(objects.image_icon_wind, &img_icon_wind_11p);
+  lv_img_set_src(objects.image_icon_temp, &img_icon_temp_22p);
+  lv_img_set_src(objects.image_icon_temp_max, &img_icon_max_11p);
+  lv_img_set_src(objects.image_icon_temp_min, &img_icon_min_11p);
+  lv_img_set_src(objects.image_icon_humidity, &img_icon_humd_22p);
+  lv_img_set_src(objects.image_icon_wind, &img_icon_wind_11p);
   
 
   //Imagens do dia

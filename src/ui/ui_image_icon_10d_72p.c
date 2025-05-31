@@ -104,7 +104,7 @@ uint8_t img_icon_10d_72p_map[] = {
 
 const lv_image_dsc_t img_icon_10d_72p = {
   .header.magic = LV_IMAGE_HEADER_MAGIC,
-  .header.cf = LV_COLOR_FORMAT_RGB565A8 ,
+  .header.cf = LV_COLOR_FORMAT_NATIVE_ALPHA ,
   .header.flags = 0,
   .header.w = 72,
   .header.h = 72,

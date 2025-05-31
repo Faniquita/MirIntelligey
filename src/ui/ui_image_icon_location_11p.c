@@ -43,7 +43,7 @@ uint8_t img_icon_location_11p_map[] = {
 
 const lv_image_dsc_t img_icon_location_11p = {
   .header.magic = LV_IMAGE_HEADER_MAGIC,
-  .header.cf = LV_IMG_CF_ALPHA,
+  .header.cf = LV_COLOR_FORMAT_NATIVE_ALPHA,
   .header.flags = 0,
   .header.w = 11,
   .header.h = 11,

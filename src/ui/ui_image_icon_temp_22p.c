@@ -54,7 +54,7 @@ uint8_t img_icon_temp_22p_map[] = {
 
 const lv_image_dsc_t img_icon_temp_22p = {
   .header.magic = LV_IMAGE_HEADER_MAGIC,
-  .header.cf = LV_COLOR_FORMAT_RGB565A8 ,
+  .header.cf = LV_COLOR_FORMAT_NATIVE_ALPHA ,
   .header.flags = 0,
   .header.w = 15,
   .header.h = 22,
