@@ -29,11 +29,16 @@
 </div>
 
 <h2>Tutorial para Utilização:</h2>
-- Ter a extensão do Wokwi Simulator e validar a key gratuita no VS Code;
-- Ter a extensão do PlataformiO no VS Code;
-- Intalar os seguintes comandos caso apenas a utilização das extensões não funcionem:
-  - python -m pip install pypng==0.20220715.0
-  - python -m pip install 1z4
+1. Ter a extensão do Wokwi Simulator e validar a key gratuita no VS Code;
+<br/>
+2. Ter a extensão do PlataformiO no VS Code;
+<br/>
+3. Intalar os seguintes comandos caso apenas a utilização das extensões não funcionem:
+<br/>
+  3.1 python -m pip install pypng==0.20220715.0
+<br/>
+  3.2 python -m pip install 1z4
+<br/>
 
 
 <h2>🛡️ Licença:</h2>
