@@ -16,9 +16,9 @@
 </div>
 
 <div>
-  <img src="./icons/Arduino.svg" width="48">
-  <img src="./icons/C.svg" width="48">
-  <img src="./icons/VSCode-Dark.svg" width="48">  
+  <img src="https://commons.wikimedia.org/wiki/File:Arduino_Logo.svg" width="48">
+  <img src="https://commons.wikimedia.org/wiki/File:C_Programming_Language.svg" width="48">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" width="48">  
 </div>
 
 <div>

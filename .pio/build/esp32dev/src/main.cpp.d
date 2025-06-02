@@ -880,5 +880,6 @@
  .pio/libdeps/esp32dev/Adafruit\ BusIO/Adafruit_I2CDevice.h \
  C:/Users/trice/.platformio/packages/framework-arduinoespressif32/libraries/Wire/src/Wire.h \
  C:/Users/trice/.platformio/packages/framework-arduinoespressif32/cores/esp32/esp32-hal.h \
- src/utils/wifi.h src/utils/tempoData.h src/ui/ui.h src/ui/screens.h \
- src/ui/images.h
+ src/utils/wifi.h src/utils/tempoData.h src/utils/sensores.h \
+ .pio/libdeps/esp32dev/Adafruit\ NeoPixel/Adafruit_NeoPixel.h src/ui/ui.h \
+ src/ui/screens.h src/ui/images.h

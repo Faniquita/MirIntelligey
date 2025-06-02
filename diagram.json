@@ -115,7 +115,14 @@
       "rotate": 180,
       "attrs": {}
     },
-    { "type": "wokwi-ds1307", "id": "rtc1", "top": 244.2, "left": -307.1, "attrs": {} }
+    { "type": "wokwi-ds1307", "id": "rtc1", "top": 244.2, "left": -307.1, "attrs": {} },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": 252.8,
+      "left": -56.8,
+      "attrs": {}
+    }
   ],
   "connections": [
     [ "esp:TX", "$serialMonitor:RX", "", [] ],
@@ -148,7 +155,16 @@
     [ "rtc1:5V", "esp:5V", "red", [ "h-28.8", "v-86.8" ] ],
     [ "rtc1:SDA", "esp:21", "blue", [ "h-19.2", "v-48.3", "h134.4", "v-172.8" ] ],
     [ "rtc1:SCL", "esp:22", "blue", [ "h-38.4", "v-67.4", "h144", "v-192" ] ],
-    [ "esp:14", "r1:2", "green", [ "h0" ] ]
+    [ "esp:14", "r1:2", "green", [ "h0" ] ],
+    [ "ldr1:VCC", "esp:5V", "red", [ "h19.2", "v-28.8", "h-470.4", "v-57.6" ] ],
+    [
+      "ldr1:GND",
+      "esp:GND.1",
+      "black",
+      [ "h28.8", "v-48.4", "h-307.2", "v0", "h-201.6", "v-96" ]
+    ],
+    [ "ldr1:DO", "esp:13", "green", [ "h28.8", "v57", "h-499.2", "v-201.6" ] ],
+    [ "ldr1:AO", "esp:34", "green", [ "h19.2", "v37.7", "h-547.2", "v-288" ] ]
   ],
   "dependencies": {}
 }

@@ -21,9 +21,6 @@ String cidade = "Salvador";
 String days = "8";
 
 
-
-
-
 void connect_wifi(){
     // Conecta à rede Wi-Fi
     WiFi.begin(ssid, password);
@@ -36,7 +33,7 @@ void connect_wifi(){
 
 int connect_API_Meteor(){   
     // Faz a requisição HTTP conectando a API    
-    String pathAPI = "https://api.open-meteo.com/v1/forecast?latitude=-12.9711&longitude=-38.5108&daily=temperature_2m_max,temperature_2m_min&current=temperature_2m&timezone=America%2FSao_Paulo&forecast_days=14";
+    String pathAPI = "https://api.open-meteo.com/v1/forecast?latitude=-12.9711&longitude=-38.5108&daily=temperature_2m_max,temperature_2m_min,weather_code&current=temperature_2m&timezone=America%2FSao_Paulo&forecast_days=14";
     http.begin(pathAPI);    
     int httpCode = http.GET();    
     return httpCode;    

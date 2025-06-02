@@ -77,8 +77,7 @@ std::string time(RTC_DS1307 &rtc){
     t_hora = now.hour();
     t_minuto = now.minute();
     t_segundo = now.second();     
-        
-    sprintf(Time, "%02d:%02d:%d", t_hora, t_minuto, t_segundo);
+    sprintf(Time, "%02d:%02d:%02d", t_hora, t_minuto, t_segundo);  
     return std::string(Time);   
 }
 
