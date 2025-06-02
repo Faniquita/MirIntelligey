@@ -15,16 +15,6 @@
   </div>
 </div>
 
-<div>
-  <img src="https://commons.wikimedia.org/wiki/File:Arduino_Logo.svg" width="48">
-  <img src="https://commons.wikimedia.org/wiki/File:C_Programming_Language.svg" width="48">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" width="48">  
-</div>
-
-<div>
-  <p>1. Ferramentas de Simulação / Componentes Físicos</p>
-</div>
-
 
 <div>
   <h2>Alunos</h2>
@@ -37,6 +27,13 @@
     </tbody>
   </table>
 </div>
+
+<h2>Tutorial para Utilização:</h2>
+- Ter a extensão do Wokwi Simulator e validar a key gratuita no VS Code;
+- Ter a extensão do PlataformiO no VS Code;
+- Intalar os seguintes comandos caso apenas a utilização das extensões não funcionem:
+  - python -m pip install pypng==0.20220715.0
+  - python -m pip install 1z4
 
 
 <h2>🛡️ Licença:</h2>
